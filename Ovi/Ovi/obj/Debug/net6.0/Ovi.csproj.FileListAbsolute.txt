@@ -1,0 +1,15 @@
+C:\Ovi\Ovi\bin\Debug\net6.0\Ovi.exe
+C:\Ovi\Ovi\bin\Debug\net6.0\Ovi.deps.json
+C:\Ovi\Ovi\bin\Debug\net6.0\Ovi.runtimeconfig.json
+C:\Ovi\Ovi\bin\Debug\net6.0\Ovi.dll
+C:\Ovi\Ovi\bin\Debug\net6.0\Ovi.pdb
+C:\Ovi\Ovi\obj\Debug\net6.0\Ovi.csproj.AssemblyReference.cache
+C:\Ovi\Ovi\obj\Debug\net6.0\Ovi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Ovi\Ovi\obj\Debug\net6.0\Ovi.AssemblyInfoInputs.cache
+C:\Ovi\Ovi\obj\Debug\net6.0\Ovi.AssemblyInfo.cs
+C:\Ovi\Ovi\obj\Debug\net6.0\Ovi.csproj.CoreCompileInputs.cache
+C:\Ovi\Ovi\obj\Debug\net6.0\Ovi.dll
+C:\Ovi\Ovi\obj\Debug\net6.0\refint\Ovi.dll
+C:\Ovi\Ovi\obj\Debug\net6.0\Ovi.pdb
+C:\Ovi\Ovi\obj\Debug\net6.0\Ovi.genruntimeconfig.cache
+C:\Ovi\Ovi\obj\Debug\net6.0\ref\Ovi.dll
