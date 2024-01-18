@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ovi
 {
+    //Github testi
   
     enum OvenMuodot { Auki, Kiinni, Lukossa};
 
