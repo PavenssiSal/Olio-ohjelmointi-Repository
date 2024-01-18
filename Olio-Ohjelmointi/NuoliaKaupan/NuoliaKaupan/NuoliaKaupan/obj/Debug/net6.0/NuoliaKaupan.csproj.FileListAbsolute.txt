@@ -1,0 +1,15 @@
+C:\NuoliaKaupan\NuoliaKaupan\NuoliaKaupan\bin\Debug\net6.0\NuoliaKaupan.exe
+C:\NuoliaKaupan\NuoliaKaupan\NuoliaKaupan\bin\Debug\net6.0\NuoliaKaupan.deps.json
+C:\NuoliaKaupan\NuoliaKaupan\NuoliaKaupan\bin\Debug\net6.0\NuoliaKaupan.runtimeconfig.json
+C:\NuoliaKaupan\NuoliaKaupan\NuoliaKaupan\bin\Debug\net6.0\NuoliaKaupan.dll
+C:\NuoliaKaupan\NuoliaKaupan\NuoliaKaupan\bin\Debug\net6.0\NuoliaKaupan.pdb
+C:\NuoliaKaupan\NuoliaKaupan\NuoliaKaupan\obj\Debug\net6.0\NuoliaKaupan.csproj.AssemblyReference.cache
+C:\NuoliaKaupan\NuoliaKaupan\NuoliaKaupan\obj\Debug\net6.0\NuoliaKaupan.GeneratedMSBuildEditorConfig.editorconfig
+C:\NuoliaKaupan\NuoliaKaupan\NuoliaKaupan\obj\Debug\net6.0\NuoliaKaupan.AssemblyInfoInputs.cache
+C:\NuoliaKaupan\NuoliaKaupan\NuoliaKaupan\obj\Debug\net6.0\NuoliaKaupan.AssemblyInfo.cs
+C:\NuoliaKaupan\NuoliaKaupan\NuoliaKaupan\obj\Debug\net6.0\NuoliaKaupan.csproj.CoreCompileInputs.cache
+C:\NuoliaKaupan\NuoliaKaupan\NuoliaKaupan\obj\Debug\net6.0\NuoliaKaupan.dll
+C:\NuoliaKaupan\NuoliaKaupan\NuoliaKaupan\obj\Debug\net6.0\refint\NuoliaKaupan.dll
+C:\NuoliaKaupan\NuoliaKaupan\NuoliaKaupan\obj\Debug\net6.0\NuoliaKaupan.pdb
+C:\NuoliaKaupan\NuoliaKaupan\NuoliaKaupan\obj\Debug\net6.0\NuoliaKaupan.genruntimeconfig.cache
+C:\NuoliaKaupan\NuoliaKaupan\NuoliaKaupan\obj\Debug\net6.0\ref\NuoliaKaupan.dll
