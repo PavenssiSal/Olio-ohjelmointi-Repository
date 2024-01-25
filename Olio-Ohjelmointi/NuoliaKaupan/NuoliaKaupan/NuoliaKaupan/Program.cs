@@ -1,106 +1,153 @@
 ﻿using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
+using static NuoliaKaupan.Program;
+using System;
 
 namespace NuoliaKaupan
 {
-    internal class Program
+
+    public enum kärki
     {
-        enum kärki { 
-            puu,
-            teräs, 
-            timantti
-        }
-        enum perä
+        puu,
+        teräs,
+        timantti
+    }
+
+    public enum perä
+    {
+        lehti,
+        kanansulka,
+        kotkansulka
+    }
+
+    // Luokka Nuoli, joka kuvaa pelaajan valitsemaa nuolta
+    public class Nuoli
+    {
+        // Luokkamuuttujat
+        private kärki karki;
+        private perä pera;
+        private double varrenPituus; // Pituus senttimetreinä
+
+
+        // Konstruktori
+        public Nuoli(kärki karki, perä pera, double varrenPituus)
         {
-            lehti,
-            kanansulka,
-            kotkansulka
+            this.karki = karki;
+            this.pera = pera;
+            this.varrenPituus = varrenPituus;
         }
 
+        // Metodi nuolen hinnan laskemiseksi
+        public double PalautaHinta()
+        {
+            // Hinnat materiaaleille
+            double karkinHinta = 0;
+            double peranHinta = 0.0;
+            double varrenHinta = 0.05 * varrenPituus;
+
+            // Hinta kärjelle
+            switch (karki)
+            {
+                case kärki.puu:
+                    karkinHinta = 3;
+                    break;
+                case kärki.teräs:
+                    karkinHinta = 5;
+                    break;
+                case kärki.timantti:
+                    karkinHinta = 50;
+                    break;
+            }
+
+            // Hinta perälle
+            switch (pera)
+            {
+                case perä.lehti:
+                    peranHinta = 0;
+                    break;
+                case perä.kanansulka:
+                    peranHinta = 1;
+                    break;
+                case perä.kotkansulka:
+                    peranHinta = 5;
+                    break;
+            }
+
+            // Yhteishinta
+            return karkinHinta + peranHinta + varrenHinta;
+        }
+    }
+    class Program
+    {
         static void Main(string[] args)
         {
             kärki _kärki = 0;
             perä _sulka = 0;
+            kärki valittuKärki;
+            perä valittuPerä;
+            double varrenPituus;
 
             double hinta = 0;
-            
 
-                //Nuolen terän jutut
-                while (true)
+
+
+            //Nuolen terän jutut
+            while (true)
+            {
+                Console.WriteLine($"Minkälainen kärki?");
+                Console.WriteLine("puu, teräs tai timantti");
+                string KärkiMalli = Console.ReadLine();
+                if (KärkiMalli == "puu" || KärkiMalli == "teräs" || KärkiMalli == "timantti")
                 {
-                     Console.WriteLine($"Minkälainen kärki?");
-                     Console.WriteLine("puu, teräs tai timantti");
-                    string KärkiMalli = Console.ReadLine();
-                    if (KärkiMalli == "puu")
-                    {
-                        _kärki = kärki.puu;
-                        hinta += 3;
-                        break;
-                     }
-                    else if (KärkiMalli == "teräs")
-                    {
-                        _kärki = kärki.teräs;
-                        hinta += 5;
-                        break;
-                    }
-                    else if (KärkiMalli == "timantti")
-                    {
-                        _kärki = kärki.timantti;
-                        hinta += 50;
-                        break;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Ei ole vaihtoehto, valitse uudestaan!");
-                    }
+                    ValittuKarki = 
+                    valittuKärki = ValittuKarki;
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Ei ole vaihtoehto, valitse uudestaan!");
+                }
             }
-               
-                while (true)
+
+            while (true)
             {
                 //Nuolen perän metodit
                 Console.WriteLine("Minkälainen perä?");
                 Console.WriteLine("lehti, kanansulka tai kotkansulka");
                 string SulkaMalli = Console.ReadLine();
-                if (SulkaMalli == "lehti")
+                if (SulkaMalli == "lehti" || SulkaMalli == "kanansulka" || SulkaMalli == "kotkansulka")
                 {
-                    _sulka = perä.lehti;
-                    break;
-                }
-                else if (SulkaMalli == "kanansulka")
-                {
-                    _sulka = perä.kanansulka;
-                    hinta += 1;
-                    break;
-                }
-                else if (SulkaMalli == "kotkansulka")
-                {
-                    _sulka = perä.kotkansulka;
-                    hinta += 5;
+                    perä valittuPera = (perä)Enum.Parse(typeof(perä), Console.ReadLine());
+                    valittuPerä = valittuPera;
                     break;
                 }
                 else
                 {
                     Console.WriteLine("Ei ole vaihtoehte, valitese uudestaan");
                 }
-                
+
             }
 
             while (true)
             {
                 Console.WriteLine("Kuinka pitkä? (60-100)");
-                double pituus = Convert.ToInt32(Console.ReadLine());
+                double pituus = Convert.ToDouble(Console.ReadLine());
                 if (pituus <= 100 && pituus >= 60)
                 {
-                    pituus *= 0.05;
-                    hinta += pituus;
+                    varrenPituus = pituus;
                     break;
                 }
                 else
                 {
                     Console.WriteLine("Koko ei sovi, valitse uudelleen!");
                 }
+                // Luodaan uusi Nuoli-instanssi käyttäjän valinnoilla
+                Nuoli pelaajanNuoli = new Nuoli(valittuKärki, valittuPerä, pituus);
+
+            // Näytetään nuolen hinta
+            Console.WriteLine($"Nuolen hinta on {pelaajanNuoli.PalautaHinta()} kultaa.");
             }
-            Console.WriteLine($"Nuolen hinta on {hinta} kultaa");
+
         }
     }
 }
