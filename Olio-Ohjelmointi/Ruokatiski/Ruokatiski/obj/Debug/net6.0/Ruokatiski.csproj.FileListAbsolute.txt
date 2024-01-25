@@ -1,0 +1,15 @@
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Ruokatiski\Ruokatiski\bin\Debug\net6.0\Ruokatiski.exe
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Ruokatiski\Ruokatiski\bin\Debug\net6.0\Ruokatiski.deps.json
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Ruokatiski\Ruokatiski\bin\Debug\net6.0\Ruokatiski.runtimeconfig.json
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Ruokatiski\Ruokatiski\bin\Debug\net6.0\Ruokatiski.dll
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Ruokatiski\Ruokatiski\bin\Debug\net6.0\Ruokatiski.pdb
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Ruokatiski\Ruokatiski\obj\Debug\net6.0\Ruokatiski.csproj.AssemblyReference.cache
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Ruokatiski\Ruokatiski\obj\Debug\net6.0\Ruokatiski.GeneratedMSBuildEditorConfig.editorconfig
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Ruokatiski\Ruokatiski\obj\Debug\net6.0\Ruokatiski.AssemblyInfoInputs.cache
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Ruokatiski\Ruokatiski\obj\Debug\net6.0\Ruokatiski.AssemblyInfo.cs
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Ruokatiski\Ruokatiski\obj\Debug\net6.0\Ruokatiski.csproj.CoreCompileInputs.cache
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Ruokatiski\Ruokatiski\obj\Debug\net6.0\Ruokatiski.dll
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Ruokatiski\Ruokatiski\obj\Debug\net6.0\refint\Ruokatiski.dll
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Ruokatiski\Ruokatiski\obj\Debug\net6.0\Ruokatiski.pdb
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Ruokatiski\Ruokatiski\obj\Debug\net6.0\Ruokatiski.genruntimeconfig.cache
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Ruokatiski\Ruokatiski\obj\Debug\net6.0\ref\Ruokatiski.dll

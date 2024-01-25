@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Ruokatiski\\Ruokatiski\\Ruokatiski.csproj",
+      "projectUniqueName": "C:\\Tiedostot\\Olio-ohjelmointi-Repository\\Olio-Ohjelmointi\\Ruokatiski\\Ruokatiski\\Ruokatiski.csproj",
       "projectName": "Ruokatiski",
-      "projectPath": "C:\\Ruokatiski\\Ruokatiski\\Ruokatiski.csproj",
+      "projectPath": "C:\\Tiedostot\\Olio-ohjelmointi-Repository\\Olio-Ohjelmointi\\Ruokatiski\\Ruokatiski\\Ruokatiski.csproj",
       "packagesPath": "C:\\Users\\s2200897\\.nuget\\packages\\",
-      "outputPath": "C:\\Ruokatiski\\Ruokatiski\\obj\\",
+      "outputPath": "C:\\Tiedostot\\Olio-ohjelmointi-Repository\\Olio-Ohjelmointi\\Ruokatiski\\Ruokatiski\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\s2200897\\AppData\\Roaming\\NuGet\\NuGet.Config",

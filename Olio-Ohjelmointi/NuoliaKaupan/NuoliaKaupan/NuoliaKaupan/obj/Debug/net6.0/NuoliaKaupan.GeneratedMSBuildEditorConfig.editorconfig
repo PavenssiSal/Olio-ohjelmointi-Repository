@@ -8,4 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = NuoliaKaupan
-build_property.ProjectDir = C:\NuoliaKaupan\NuoliaKaupan\NuoliaKaupan\
+build_property.ProjectDir = C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\NuoliaKaupan\NuoliaKaupan\NuoliaKaupan\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\NuoliaKaupan\\NuoliaKaupan\\NuoliaKaupan\\NuoliaKaupan.csproj",
+      "projectUniqueName": "C:\\Tiedostot\\Olio-ohjelmointi-Repository\\Olio-Ohjelmointi\\NuoliaKaupan\\NuoliaKaupan\\NuoliaKaupan\\NuoliaKaupan.csproj",
       "projectName": "NuoliaKaupan",
-      "projectPath": "C:\\NuoliaKaupan\\NuoliaKaupan\\NuoliaKaupan\\NuoliaKaupan.csproj",
+      "projectPath": "C:\\Tiedostot\\Olio-ohjelmointi-Repository\\Olio-Ohjelmointi\\NuoliaKaupan\\NuoliaKaupan\\NuoliaKaupan\\NuoliaKaupan.csproj",
       "packagesPath": "C:\\Users\\s2200897\\.nuget\\packages\\",
-      "outputPath": "C:\\NuoliaKaupan\\NuoliaKaupan\\NuoliaKaupan\\obj\\",
+      "outputPath": "C:\\Tiedostot\\Olio-ohjelmointi-Repository\\Olio-Ohjelmointi\\NuoliaKaupan\\NuoliaKaupan\\NuoliaKaupan\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\s2200897\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
