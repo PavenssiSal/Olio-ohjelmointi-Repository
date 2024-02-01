@@ -1,0 +1,15 @@
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Seikkaliareppu\Seikkaliareppu\bin\Debug\net8.0\Seikkaliareppu.exe
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Seikkaliareppu\Seikkaliareppu\bin\Debug\net8.0\Seikkaliareppu.deps.json
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Seikkaliareppu\Seikkaliareppu\bin\Debug\net8.0\Seikkaliareppu.runtimeconfig.json
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Seikkaliareppu\Seikkaliareppu\bin\Debug\net8.0\Seikkaliareppu.dll
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Seikkaliareppu\Seikkaliareppu\bin\Debug\net8.0\Seikkaliareppu.pdb
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Seikkaliareppu\Seikkaliareppu\obj\Debug\net8.0\Seikkaliareppu.GeneratedMSBuildEditorConfig.editorconfig
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Seikkaliareppu\Seikkaliareppu\obj\Debug\net8.0\Seikkaliareppu.AssemblyInfoInputs.cache
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Seikkaliareppu\Seikkaliareppu\obj\Debug\net8.0\Seikkaliareppu.AssemblyInfo.cs
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Seikkaliareppu\Seikkaliareppu\obj\Debug\net8.0\Seikkaliareppu.csproj.CoreCompileInputs.cache
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Seikkaliareppu\Seikkaliareppu\obj\Debug\net8.0\Seikkaliareppu.sourcelink.json
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Seikkaliareppu\Seikkaliareppu\obj\Debug\net8.0\Seikkaliareppu.dll
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Seikkaliareppu\Seikkaliareppu\obj\Debug\net8.0\refint\Seikkaliareppu.dll
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Seikkaliareppu\Seikkaliareppu\obj\Debug\net8.0\Seikkaliareppu.pdb
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Seikkaliareppu\Seikkaliareppu\obj\Debug\net8.0\Seikkaliareppu.genruntimeconfig.cache
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Seikkaliareppu\Seikkaliareppu\obj\Debug\net8.0\ref\Seikkaliareppu.dll
