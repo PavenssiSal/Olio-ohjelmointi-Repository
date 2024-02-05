@@ -122,7 +122,6 @@ class Program
             Console.WriteLine("4. Vesi");
             Console.WriteLine("5. Ruoka-annos");
             Console.WriteLine("6. Miekka");
-            Console.WriteLine("7. Lopeta");
 
             int valinta;
             if (int.TryParse(Console.ReadLine(), out valinta))
@@ -147,9 +146,6 @@ class Program
                     case 6:
                         pelaajanReppu.Lisää(new Miekka());
                         break;
-                    case 7:
-                        Console.WriteLine("Peli päättyy. Kiitos pelaamisesta!");
-                        return;
                     default:
                         Console.WriteLine("Virheellinen valinta. Yritä uudelleen.");
                         break;
