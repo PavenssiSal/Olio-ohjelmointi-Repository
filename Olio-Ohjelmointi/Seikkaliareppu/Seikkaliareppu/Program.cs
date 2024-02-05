@@ -1,5 +1,5 @@
 ﻿using System;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Linq;
 
 class Tavara
 {
@@ -46,137 +46,122 @@ class Miekka : Tavara
 class Reppu
 {
     private Tavara[] tavarat;
-    private int maxTavaroidenMaara;
-    private double maxKantoPaino;
-    private double maxTilavuus;
-    private int tavaroidenMaara;
-    private double kokonaisPaino;
-    private double kokonaisTilavuus;
+    private int maksimiTavaroidenMäärä;
+    private double maksimiKantoPaino;
+    private double maksimiTilavuus;
 
-    public Reppu(int maxTavaroidenMaara, double maxKantoPaino, double maxTilavuus)
+    public Reppu(int maksimiTavaroidenMäärä, double maksimiKantoPaino, double maksimiTilavuus)
     {
-        this.maxTavaroidenMaara = maxTavaroidenMaara;
-        this.maxKantoPaino = maxKantoPaino;
-        this.maxTilavuus = maxTilavuus;
-        tavarat = new Tavara[maxTavaroidenMaara];
-        tavaroidenMaara = 0;
-        kokonaisPaino = 0;
-        kokonaisTilavuus = 0;
+        this.maksimiTavaroidenMäärä = maksimiTavaroidenMäärä;
+        this.maksimiKantoPaino = maksimiKantoPaino;
+        this.maksimiTilavuus = maksimiTilavuus;
+        tavarat = new Tavara[maksimiTavaroidenMäärä];
     }
+
+    public int TavaraMäärä => tavarat.Count(t => t != null);
+    public double TavaroidenPaino => tavarat.Where(t => t != null).Sum(t => t.Paino);
+    public double TavaroidenTilavuus => tavarat.Where(t => t != null).Sum(t => t.Tilavuus);
+    public double JäljelläKantoPaino => maksimiKantoPaino - TavaroidenPaino;
+    public double JäljelläTilavuus => maksimiTilavuus - TavaroidenTilavuus;
 
     public bool Lisää(Tavara tavara)
     {
-        if (tavaroidenMaara < maxTavaroidenMaara && kokonaisPaino + tavara.Paino <= maxKantoPaino && kokonaisTilavuus + tavara.Tilavuus <= maxTilavuus)
+        if (TavaraMäärä < maksimiTavaroidenMäärä && TavaroidenPaino + tavara.Paino <= maksimiKantoPaino && TavaroidenTilavuus + tavara.Tilavuus <= maksimiTilavuus)
         {
-            tavarat[tavaroidenMaara] = tavara;
-            tavaroidenMaara++;
-            kokonaisPaino += tavara.Paino;
-            kokonaisTilavuus += tavara.Tilavuus;
-            Console.WriteLine("Tavara lisätty onnistuneesti!");
-            return true;
-        }
-        if (maxKantoPaino <= kokonaisPaino)
-        {
-            Console.WriteLine("Tavaran lisääminen epäonnistui. Reppu on liian painava");
-            return false;
-        }
-        if (maxTavaroidenMaara <= tavaroidenMaara)
-        {
-            Console.WriteLine("Tavaran lisääminen epäonnistui. Repussa on liikaa tavaraa.");
-            return false;
-        }
-        if (maxTilavuus <= kokonaisTilavuus)
-        {
-            Console.WriteLine("Tavaran lisääminen epäonnistui. Repussa ei ole tilaa");
-            return false;
+            for (int i = 0; i < maksimiTavaroidenMäärä; i++)
+            {
+                if (tavarat[i] == null)
+                {
+                    tavarat[i] = tavara;
+                    return true;
+                }
+            }
         }
         else
         {
-            return false;
+            Console.WriteLine($"Tavaran lisääminen epäonnistui. {MiksiEiPysty(tavara)}");
         }
+        return false;
     }
 
-    public int TavaroidenMäärä
+    private string MiksiEiPysty(Tavara tavara)
     {
-        get { return tavaroidenMaara; }
-    }
-
-    public double KokonaisPaino
-    {
-        get { return kokonaisPaino; }
-    }
-
-    public double KokonaisTilavuus
-    {
-        get { return kokonaisTilavuus; }
+        if (TavaraMäärä >= maksimiTavaroidenMäärä)
+        {
+            return "Reppussa on liikaa tavaraa.";
+        }
+        else if (TavaroidenPaino + tavara.Paino > maksimiKantoPaino)
+        {
+            return "Reppu on liian painava.";
+        }
+        else if (TavaroidenTilavuus + tavara.Tilavuus > maksimiTilavuus)
+        {
+            return "Reppu on liian täynnä tilavuudeltaan.";
+        }
+        else
+        {
+            return "U broke it, why and how";
+        }
     }
 }
 
 class Program
 {
-    int number;
     static void Main()
     {
-        Reppu pelaajanReppu = new Reppu(10, 30, 20);
+        Reppu pelaajanReppu = new Reppu(maksimiTavaroidenMäärä: 10, maksimiKantoPaino: 30, maksimiTilavuus: 20);
 
-        Console.WriteLine("Tervetuloa seikkailijanreppuun!");
-        Console.WriteLine("Voit lisätä eri tavaroita reppuusi.");
+        Console.WriteLine("Tervetuloa pelaaja! Voit lisätä tavaroita repun avulla.");
 
         while (true)
         {
-            NäytäReppuTiedot(pelaajanReppu);
-
-            Console.WriteLine();
-            Console.WriteLine("Valitse tavara:");
+            Console.WriteLine("\nValitse tavara:");
             Console.WriteLine("1. Nuoli");
             Console.WriteLine("2. Jousi");
             Console.WriteLine("3. Köysi");
             Console.WriteLine("4. Vesi");
             Console.WriteLine("5. Ruoka-annos");
             Console.WriteLine("6. Miekka");
-            Console.WriteLine("7. Poistu");
-            int valinta = int.Parse(Console.ReadLine());
+            Console.WriteLine("7. Lopeta");
 
-            bool isNumber = int.TryParse(valinta, out number);
-
-            if (isNumber)
-
-                switch (valinta)
+            int valinta;
+            if (int.TryParse(Console.ReadLine(), out valinta))
             {
-                case 1:
-                    pelaajanReppu.Lisää(new Nuoli());
-                    break;
-                case 2:
-                    pelaajanReppu.Lisää(new Jousi());
-                    break;
-                case 3:
-                    pelaajanReppu.Lisää(new Köysi());
-                    break;
-                case 4:
-                    pelaajanReppu.Lisää(new Vesi());
-                    break;
-                case 5:
-                    pelaajanReppu.Lisää(new RuokaAnnos());
-                    break;
-                case 6:
-                    pelaajanReppu.Lisää(new Miekka());
-                    break;
-                case 7:
-                    Environment.Exit(0);
-                    break;
-                default:
-                    Console.WriteLine("Virheellinen valinta. Yritä uudelleen.");
-                    break;
+                switch (valinta)
+                {
+                    case 1:
+                        pelaajanReppu.Lisää(new Nuoli());
+                        break;
+                    case 2:
+                        pelaajanReppu.Lisää(new Jousi());
+                        break;
+                    case 3:
+                        pelaajanReppu.Lisää(new Köysi());
+                        break;
+                    case 4:
+                        pelaajanReppu.Lisää(new Vesi());
+                        break;
+                    case 5:
+                        pelaajanReppu.Lisää(new RuokaAnnos());
+                        break;
+                    case 6:
+                        pelaajanReppu.Lisää(new Miekka());
+                        break;
+                    case 7:
+                        Console.WriteLine("Peli päättyy. Kiitos pelaamisesta!");
+                        return;
+                    default:
+                        Console.WriteLine("Virheellinen valinta. Yritä uudelleen.");
+                        break;
+                }
+
+                Console.WriteLine($"\nReppu sisältää nyt {pelaajanReppu.TavaraMäärä} / 10 tavaraa, paino {pelaajanReppu.TavaroidenPaino} / 30, tilavuus {pelaajanReppu.TavaroidenTilavuus} / 20");
+
+            }
+            else
+            {
+                Console.WriteLine("Virheellinen syöte. Yritä uudelleen.");
             }
         }
-    }
-
-    static void NäytäReppuTiedot(Reppu reppu)
-    {
-        Console.WriteLine();
-        Console.WriteLine("Reppu sisältää:");
-        Console.WriteLine($"Tavaroiden määrä: {reppu.TavaroidenMäärä} / 10");
-        Console.WriteLine($"Kokonaispaino: {reppu.KokonaisPaino} / 30");
-        Console.WriteLine($"Kokonaistilavuus: {reppu.KokonaisTilavuus} / 20");
     }
 }

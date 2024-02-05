@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Seikkaliareppu")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76e5bece92924e85092fa1b07783c66680482cc0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c28ce049ff09fedf34db3aea4b47708fedeaa2f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Seikkaliareppu")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Seikkaliareppu")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
