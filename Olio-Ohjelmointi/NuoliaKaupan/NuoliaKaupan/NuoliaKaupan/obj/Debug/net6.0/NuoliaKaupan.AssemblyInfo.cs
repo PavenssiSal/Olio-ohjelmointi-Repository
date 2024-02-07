@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NuoliaKaupan")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a43a05dcd094709e22fabb584e1f00ea63c07e57")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4fcdeb51dc644db76644f2ca8a6cd5ed8f82355")]
 [assembly: System.Reflection.AssemblyProductAttribute("NuoliaKaupan")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NuoliaKaupan")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

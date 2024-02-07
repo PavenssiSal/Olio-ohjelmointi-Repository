@@ -1,36 +1,31 @@
-﻿using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
-using static NuoliaKaupan.Program;
-using System;
+﻿using System;
 
 namespace NuoliaKaupan
 {
-
-    public enum kärki
+    public enum Karki
     {
-        puu,
-        teräs,
-        timantti
+        Puu,
+        Teräs,
+        Timantti
     }
 
-    public enum perä
+    public enum Pera
     {
-        lehti,
-        kanansulka,
-        kotkansulka
+        Lehti,
+        Kanansulka,
+        Kotkansulka
     }
 
     // Luokka Nuoli, joka kuvaa pelaajan valitsemaa nuolta
     public class Nuoli
     {
         // Luokkamuuttujat
-        private kärki karki;
-        private perä pera;
+        private Karki karki;
+        private Pera pera;
         private double varrenPituus; // Pituus senttimetreinä
 
-
         // Konstruktori
-        public Nuoli(kärki karki, perä pera, double varrenPituus)
+        public Nuoli(Karki karki, Pera pera, double varrenPituus)
         {
             this.karki = karki;
             this.pera = pera;
@@ -48,13 +43,13 @@ namespace NuoliaKaupan
             // Hinta kärjelle
             switch (karki)
             {
-                case kärki.puu:
+                case Karki.Puu:
                     karkinHinta = 3;
                     break;
-                case kärki.teräs:
+                case Karki.Teräs:
                     karkinHinta = 5;
                     break;
-                case kärki.timantti:
+                case Karki.Timantti:
                     karkinHinta = 50;
                     break;
             }
@@ -62,13 +57,13 @@ namespace NuoliaKaupan
             // Hinta perälle
             switch (pera)
             {
-                case perä.lehti:
+                case Pera.Lehti:
                     peranHinta = 0;
                     break;
-                case perä.kanansulka:
+                case Pera.Kanansulka:
                     peranHinta = 1;
                     break;
-                case perä.kotkansulka:
+                case Pera.Kotkansulka:
                     peranHinta = 5;
                     break;
             }
@@ -77,30 +72,24 @@ namespace NuoliaKaupan
             return karkinHinta + peranHinta + varrenHinta;
         }
     }
+
     class Program
     {
         static void Main(string[] args)
         {
-            kärki _kärki = 0;
-            perä _sulka = 0;
-            kärki valittuKärki;
-            perä valittuPerä;
+            Karki valittuKarki = 0;
+            Pera valittuPera = 0;
             double varrenPituus;
 
-            double hinta = 0;
-
-
-
-            //Nuolen terän jutut
+            // Nuolen terän jutut
             while (true)
             {
-                Console.WriteLine($"Minkälainen kärki?");
+                Console.WriteLine("Minkälainen kärki?");
                 Console.WriteLine("puu, teräs tai timantti");
-                string KärkiMalli = Console.ReadLine();
-                if (KärkiMalli == "puu" || KärkiMalli == "teräs" || KärkiMalli == "timantti")
+                string karkiMalli = Console.ReadLine();
+                if (karkiMalli == "puu" || karkiMalli == "teräs" || karkiMalli == "timantti")
                 {
-                    ValittuKarki = 
-                    valittuKärki = ValittuKarki;
+                    valittuKarki = (Karki)Enum.Parse(typeof(Karki), karkiMalli, true);
                     break;
                 }
                 else
@@ -109,25 +98,24 @@ namespace NuoliaKaupan
                 }
             }
 
+            // Nuolen perän metodit
             while (true)
             {
-                //Nuolen perän metodit
                 Console.WriteLine("Minkälainen perä?");
                 Console.WriteLine("lehti, kanansulka tai kotkansulka");
-                string SulkaMalli = Console.ReadLine();
-                if (SulkaMalli == "lehti" || SulkaMalli == "kanansulka" || SulkaMalli == "kotkansulka")
+                string peraMalli = Console.ReadLine();
+                if (peraMalli == "lehti" || peraMalli == "kanansulka" || peraMalli == "kotkansulka")
                 {
-                    perä valittuPera = (perä)Enum.Parse(typeof(perä), Console.ReadLine());
-                    valittuPerä = valittuPera;
+                    valittuPera = (Pera)Enum.Parse(typeof(Pera), peraMalli, true);
                     break;
                 }
                 else
                 {
                     Console.WriteLine("Ei ole vaihtoehte, valitese uudestaan");
                 }
-
             }
 
+            // Kysytään varren pituus
             while (true)
             {
                 Console.WriteLine("Kuinka pitkä? (60-100)");
@@ -141,13 +129,13 @@ namespace NuoliaKaupan
                 {
                     Console.WriteLine("Koko ei sovi, valitse uudelleen!");
                 }
-                // Luodaan uusi Nuoli-instanssi käyttäjän valinnoilla
-                Nuoli pelaajanNuoli = new Nuoli(valittuKärki, valittuPerä, pituus);
+            }
+
+            // Luodaan uusi Nuoli-instanssi käyttäjän valinnoilla
+            Nuoli pelaajanNuoli = new Nuoli(valittuKarki, valittuPera, varrenPituus);
 
             // Näytetään nuolen hinta
             Console.WriteLine($"Nuolen hinta on {pelaajanNuoli.PalautaHinta()} kultaa.");
-            }
-
         }
     }
 }
