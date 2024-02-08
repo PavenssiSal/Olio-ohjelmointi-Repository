@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "NuoliaKaupan 3.3/1.0.0": {
+        "runtime": {
+          "NuoliaKaupan 3.3.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NuoliaKaupan 3.3/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
