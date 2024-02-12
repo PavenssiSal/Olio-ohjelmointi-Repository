@@ -1,0 +1,5 @@
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Robotti\Robotti\obj\Debug\net8.0\Robotti.GeneratedMSBuildEditorConfig.editorconfig
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Robotti\Robotti\obj\Debug\net8.0\Robotti.AssemblyInfoInputs.cache
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Robotti\Robotti\obj\Debug\net8.0\Robotti.AssemblyInfo.cs
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Robotti\Robotti\obj\Debug\net8.0\Robotti.csproj.CoreCompileInputs.cache
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Robotti\Robotti\obj\Debug\net8.0\Robotti.sourcelink.json
