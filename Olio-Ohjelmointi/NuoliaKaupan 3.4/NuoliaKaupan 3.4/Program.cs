@@ -71,17 +71,81 @@ namespace NuoliaKaupan_3._4
             // Yhteishinta
             return karkinHinta + peranHinta + varrenHinta;
         }
+
+        // Staattiset metodit nuolien luomiseksi valmiista pohjista
+        public static Nuoli LuoEliittiNuoli()
+        {
+            return new Nuoli(Karki.Timantti, Pera.Kotkansulka, 100);
+        }
+
+        public static Nuoli LuoAloittelijanuoli()
+        {
+            return new Nuoli(Karki.Puu, Pera.Kanansulka, 70);
+        }
+
+        public static Nuoli LuoPerusnuoli()
+        {
+            return new Nuoli(Karki.Teräs, Pera.Kanansulka, 85);
+        }
     }
 
     class Program
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Valitse nuolen tyyppi:");
+            Console.WriteLine("1. Eliittinuoli");
+            Console.WriteLine("2. Aloittelijanuoli");
+            Console.WriteLine("3. Perusnuoli");
+            Console.WriteLine("4. Luo oma nuoli");
+
+            int valinta = Convert.ToInt32(Console.ReadLine());
+
+            Nuoli pelaajanNuoli;
+
+            while (true) 
+            {
+                if (valinta == 1)
+                {
+                    pelaajanNuoli = Nuoli.LuoEliittiNuoli();
+                    break;
+                }
+                else if (valinta == 2)
+                {
+                    pelaajanNuoli = Nuoli.LuoAloittelijanuoli();
+                    break;
+                }
+                else if (valinta == 3)
+                {
+                    pelaajanNuoli = Nuoli.LuoPerusnuoli();
+                    break;
+                }
+                else if (valinta == 4)
+                {
+                    pelaajanNuoli = LuoOmaNuoli();
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Virheellinen valinta. Why you do this?");
+                    System.Environment.Exit(1);
+                }
+            }
+
+            
+
+            // Näytetään nuolen hinta
+            Console.WriteLine($"Nuolen hinta on {pelaajanNuoli.PalautaHinta()} kultaa.");
+        }
+
+        // Metodi oman nuolen luomiseksi
+        static Nuoli LuoOmaNuoli()
+        {
             Karki valittuKarki = 0;
             Pera valittuPera = 0;
             double varrenPituus;
 
-            // Nuolen terän jutut
+            // Nuolen terän valinta
             while (true)
             {
                 Console.WriteLine("Minkälainen kärki?");
@@ -98,7 +162,7 @@ namespace NuoliaKaupan_3._4
                 }
             }
 
-            // Nuolen perän metodit
+            // Nuolen perän valinta
             while (true)
             {
                 Console.WriteLine("Minkälainen perä?");
@@ -131,12 +195,8 @@ namespace NuoliaKaupan_3._4
                 }
             }
 
-            // Luodaan uusi Nuoli-instanssi käyttäjän valinnoilla
-            Nuoli pelaajanNuoli = new Nuoli(valittuKarki, valittuPera, varrenPituus);
-
-            // Näytetään nuolen hinta
-            Console.WriteLine($"Nuolen hinta on {pelaajanNuoli.PalautaHinta()} kultaa.");
+            // Palautetaan uusi Nuoli-instanssi käyttäjän valinnoilla
+            return new Nuoli(valittuKarki, valittuPera, varrenPituus);
         }
     }
 }
-
