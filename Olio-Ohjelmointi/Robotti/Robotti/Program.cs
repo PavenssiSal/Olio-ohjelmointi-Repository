@@ -2,6 +2,45 @@
 
 namespace Robotti
 {
+
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            Robotti rob = new Robotti();
+
+            Console.WriteLine("Mitä komentoja syötetään robotille? Vaihtoehdot: Käynnistä, Sammuta, Vasemmalle," +
+            " Oikealle, Alas, Ylös");
+            string vastaus = Console.ReadLine();
+            if (vastaus == "Käynnistä")
+            {
+                rob.AnnaKäsky(new Käynnistä());
+            }
+            if (vastaus == "Sammuta")
+            {
+                rob.AnnaKäsky(new Sammuta());
+            }
+
+            rob.Suorita();
+
+
+        }
+    }
+    public class Käynnistä : RobottiKäsky
+    {
+        public override void Suorita(Robotti toimija)
+        {
+            toimija.OnKäynnissä = true;
+        }
+    }
+    public class Sammuta : RobottiKäsky
+    {
+        public override void Suorita(Robotti toimija)
+        {
+            toimija.OnKäynnissä = false;
+        }
+    }
+
     public class Robotti
     {
         public int X { get; set; }

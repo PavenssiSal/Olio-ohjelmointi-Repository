@@ -3,3 +3,13 @@ C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Robotti\Robotti\obj\De
 C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Robotti\Robotti\obj\Debug\net8.0\Robotti.AssemblyInfo.cs
 C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Robotti\Robotti\obj\Debug\net8.0\Robotti.csproj.CoreCompileInputs.cache
 C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Robotti\Robotti\obj\Debug\net8.0\Robotti.sourcelink.json
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Robotti\Robotti\bin\Debug\net8.0\Robotti.exe
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Robotti\Robotti\bin\Debug\net8.0\Robotti.deps.json
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Robotti\Robotti\bin\Debug\net8.0\Robotti.runtimeconfig.json
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Robotti\Robotti\bin\Debug\net8.0\Robotti.dll
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Robotti\Robotti\bin\Debug\net8.0\Robotti.pdb
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Robotti\Robotti\obj\Debug\net8.0\Robotti.dll
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Robotti\Robotti\obj\Debug\net8.0\refint\Robotti.dll
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Robotti\Robotti\obj\Debug\net8.0\Robotti.pdb
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Robotti\Robotti\obj\Debug\net8.0\Robotti.genruntimeconfig.cache
+C:\Tiedostot\Olio-ohjelmointi-Repository\Olio-Ohjelmointi\Robotti\Robotti\obj\Debug\net8.0\ref\Robotti.dll
