@@ -20,6 +20,10 @@ namespace Robotti
             {
                 rob.AnnaKäsky(new Sammuta());
             }
+            if (vastaus == "Vasemmalle")
+            {
+                rob.AnnaKäsky(new ());
+            }
 
             rob.Suorita();
 
