@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Tiedostot\\Olio-ohjelmointi-Repository\\Olio-Ohjelmointi\\Robotti\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6CCA9F35-C731-45C5-8F03-847A59C6136D}|Robotti\\Robotti.csproj|c:\\tiedostot\\olio-ohjelmointi-repository\\olio-ohjelmointi\\robotti\\robotti\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CCA9F35-C731-45C5-8F03-847A59C6136D}|Robotti\\Robotti.csproj|solutionrelative:robotti\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CCA9F35-C731-45C5-8F03-847A59C6136D}|Robotti\\Robotti.csproj|c:\\tiedostot\\olio-ohjelmointi-repository\\olio-ohjelmointi\\robotti\\robotti\\robottik\u00E4sky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CCA9F35-C731-45C5-8F03-847A59C6136D}|Robotti\\Robotti.csproj|solutionrelative:robotti\\robottik\u00E4sky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RobottiK\u00E4sky.cs",
+              "DocumentMoniker": "C:\\Tiedostot\\Olio-ohjelmointi-Repository\\Olio-Ohjelmointi\\Robotti\\Robotti\\RobottiK\u00E4sky.cs",
+              "RelativeDocumentMoniker": "Robotti\\RobottiK\u00E4sky.cs",
+              "ToolTip": "C:\\Tiedostot\\Olio-ohjelmointi-Repository\\Olio-Ohjelmointi\\Robotti\\Robotti\\RobottiK\u00E4sky.cs",
+              "RelativeToolTip": "Robotti\\RobottiK\u00E4sky.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAQwA4AAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-12T10:16:45.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Tiedostot\\Olio-ohjelmointi-Repository\\Olio-Ohjelmointi\\Robotti\\Robotti\\Program.cs",
+              "RelativeDocumentMoniker": "Robotti\\Program.cs",
+              "ToolTip": "C:\\Tiedostot\\Olio-ohjelmointi-Repository\\Olio-Ohjelmointi\\Robotti\\Robotti\\Program.cs",
+              "RelativeToolTip": "Robotti\\Program.cs",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAAAG4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-05T09:50:51.455Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

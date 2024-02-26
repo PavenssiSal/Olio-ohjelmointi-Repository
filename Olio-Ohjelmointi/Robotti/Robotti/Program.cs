@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Robotti
 {
@@ -7,27 +8,36 @@ namespace Robotti
     {
         static void Main(string[] args)
         {
-            Robotti rob = new Robotti();
+            int counter = 0;
 
-            Console.WriteLine("Mitä komentoja syötetään robotille? Vaihtoehdot: Käynnistä, Sammuta, Vasemmalle," +
-            " Oikealle, Alas, Ylös");
-            string vastaus = Console.ReadLine();
-            if (vastaus == "Käynnistä")
+            while (true)
             {
-                rob.AnnaKäsky(new Käynnistä());
-            }
-            if (vastaus == "Sammuta")
-            {
-                rob.AnnaKäsky(new Sammuta());
-            }
-            if (vastaus == "Vasemmalle")
-            {
-                rob.AnnaKäsky(new ());
-            }
-
-            rob.Suorita();
 
 
+                Robotti rob = new Robotti();
+
+                counter++;
+                Console.WriteLine("Mitä komentoja syötetään robotille? Vaihtoehdot: Käynnistä, Sammuta, Vasemmalle," +
+                " Oikealle, Alas, Ylös");
+                string vastaus = Console.ReadLine();
+                if (vastaus == "Käynnistä")
+                {
+                    rob.AnnaKäsky(new Käynnistä());
+                }
+                if (vastaus == "Sammuta")
+                {
+                    rob.AnnaKäsky(new Sammuta());
+                }
+                if (vastaus == "Vasemmalle")
+                {
+                    rob.AnnaKäsky(new Vasemmalle());
+                }
+                if (counter == 3) 
+                {
+                    rob.Suorita();
+                    break;
+                }
+            }
         }
     }
     public class Käynnistä : RobottiKäsky
@@ -45,6 +55,46 @@ namespace Robotti
         }
     }
 
+    public class Vasemmalle : RobottiKäsky
+    {
+        public override void Suorita(Robotti toimija)
+        {
+            if (toimija.OnKäynnissä = true)
+            {
+                toimija.X--;
+            }
+        }
+    }
+    public class Oikealle : RobottiKäsky
+    {
+        public override void Suorita(Robotti toimija)
+        {
+            if (toimija.OnKäynnissä = true)
+            {
+                toimija.X++;
+            }
+        }
+    }
+    public class Ylös : RobottiKäsky
+    {
+        public override void Suorita(Robotti toimija)
+        {
+            if (toimija.OnKäynnissä = true)
+            {
+                toimija.Y++;
+            }
+        }
+    }
+    public class Alas : RobottiKäsky
+    {
+        public override void Suorita(Robotti toimija)
+        {
+            if (toimija.OnKäynnissä = true)
+            {
+                toimija.Y--;
+            }
+        }
+    }
     public class Robotti
     {
         public int X { get; set; }
@@ -56,9 +106,10 @@ namespace Robotti
         // ulkopuolelle
         private RobottiKäsky?[] Käskyt;
 
+
         public Robotti()
         {
-            Käskyt = new RobottiKäsky[3];
+            Käskyt = new RobottiKäsky?[3];
         }
 
         // Palauttaa true jos käskyn antaminen onnistui
