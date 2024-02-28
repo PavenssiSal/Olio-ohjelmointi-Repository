@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Robotti")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0da5d33172230f48d862a74ace3ffed01ae8bfb1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4581780a9096c05901393ffc9de8248f63e5540c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Robotti")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Robotti")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

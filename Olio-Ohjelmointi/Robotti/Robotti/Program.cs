@@ -9,16 +9,11 @@ namespace Robotti
         static void Main(string[] args)
         {
             int counter = 0;
-
+            Robotti rob = new Robotti();
             while (true)
             {
-
-
-                Robotti rob = new Robotti();
-
                 counter++;
-                Console.WriteLine("Mitä komentoja syötetään robotille? Vaihtoehdot: Käynnistä, Sammuta, Vasemmalle," +
-                " Oikealle, Alas, Ylös");
+                Console.WriteLine("Mitä komentoja syötetään robotille? Vaihtoehdot: Käynnistä, Sammuta, Vasemmalle, Oikealle, Alas, Ylös");
                 string vastaus = Console.ReadLine();
                 if (vastaus == "Käynnistä")
                 {
@@ -32,12 +27,24 @@ namespace Robotti
                 {
                     rob.AnnaKäsky(new Vasemmalle());
                 }
+                if (vastaus == "Oikealle")
+                {
+                    rob.AnnaKäsky(new Oikealle());
+                }
+                if (vastaus == "Alas")
+                {
+                    rob.AnnaKäsky(new Alas());
+                }
+                if (vastaus == "Ylös")
+                {
+                    rob.AnnaKäsky(new Ylös());
+                }
                 if (counter == 3) 
                 {
-                    rob.Suorita();
                     break;
                 }
             }
+            rob.Suorita();
         }
     }
     public class Käynnistä : RobottiKäsky
@@ -59,7 +66,7 @@ namespace Robotti
     {
         public override void Suorita(Robotti toimija)
         {
-            if (toimija.OnKäynnissä = true)
+            if (toimija.OnKäynnissä == true)
             {
                 toimija.X--;
             }
@@ -69,7 +76,7 @@ namespace Robotti
     {
         public override void Suorita(Robotti toimija)
         {
-            if (toimija.OnKäynnissä = true)
+            if (toimija.OnKäynnissä == true)
             {
                 toimija.X++;
             }
@@ -79,7 +86,7 @@ namespace Robotti
     {
         public override void Suorita(Robotti toimija)
         {
-            if (toimija.OnKäynnissä = true)
+            if (toimija.OnKäynnissä == true)
             {
                 toimija.Y++;
             }
@@ -89,7 +96,7 @@ namespace Robotti
     {
         public override void Suorita(Robotti toimija)
         {
-            if (toimija.OnKäynnissä = true)
+            if (toimija.OnKäynnissä == true)
             {
                 toimija.Y--;
             }
@@ -130,7 +137,7 @@ namespace Robotti
             // Käskyn antaminen ei onnistunut
             return false;
         }
-
+        
         public void Suorita()
         {
             foreach (RobottiKäsky? käsky in Käskyt)
