@@ -186,7 +186,21 @@ class Shop
                 return false;
             }
         }
-
+        else if (itemName.ToLower() == "Leather Armor")
+        {
+            if (player.Gold >= 30)
+            {
+                player.Gold -= 30;
+                player.EquippedArmor = new Armor("Leather Armor", 5, 15);
+                Console.WriteLine("You bought the Leather Armor!");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("You don't have enough gold to buy this item.");
+                return false;
+            }
+        }
         foreach (var armor in armors)
         {
             if (armor.Name.ToLower() == itemName.ToLower())
@@ -268,7 +282,7 @@ class Program
         player.EquippedPotion = new Potion("Health Potion", 20, 0);
 
         Enemy[] enemies = {
-            new Enemy("Goblin", 50, 10, 5),
+            new Enemy("Goblin", 50, 30, 5),
             new Enemy("Orc", 20, 15, 8),
             new Enemy("Dragon", 20, 25, 15)
         };
@@ -279,8 +293,17 @@ class Program
 
         while (true)
         {
+            
 
-            Console.WriteLine("\n1. Fight an enemy");
+            //UI
+            Console.WriteLine();
+            Console.WriteLine("HP: " + player.Health);
+            Console.WriteLine("Gold: " + player.Gold);
+            Console.WriteLine("Weapon: " + player.EquippedWeapon.Name);
+            Console.WriteLine("Armor: " + player.EquippedArmor.Name);
+            Console.WriteLine("Potion: " + player.EquippedPotion.Name);
+            Console.WriteLine("---------------");
+            Console.WriteLine("1. Fight an enemy");
             Console.WriteLine("2. Visit the shop");
             Console.WriteLine("3. Quit");
 
@@ -351,7 +374,7 @@ class Program
             }
             else
             {
-                Console.WriteLine("\nInvalid choice. Please try again.");
+                Console.WriteLine("Invalid choice. Please try again.");
             }
         }
     }
