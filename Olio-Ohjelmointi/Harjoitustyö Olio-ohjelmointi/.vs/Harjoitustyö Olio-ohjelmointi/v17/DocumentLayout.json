@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Tiedostot\\Olio-ohjelmointi-Repository\\Olio-Ohjelmointi\\Harjoitusty\u00F6 Olio-ohjelmointi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{36FF1181-0DD9-4DAF-86AF-815478C349BD}|Harjoitusty\u00F6 Olio-ohjelmointi\\Harjoitusty\u00F6 Olio-ohjelmointi.csproj|c:\\tiedostot\\olio-ohjelmointi-repository\\olio-ohjelmointi\\harjoitusty\u00F6 olio-ohjelmointi\\harjoitusty\u00F6 olio-ohjelmointi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36FF1181-0DD9-4DAF-86AF-815478C349BD}|Harjoitusty\u00F6 Olio-ohjelmointi\\Harjoitusty\u00F6 Olio-ohjelmointi.csproj|solutionrelative:harjoitusty\u00F6 olio-ohjelmointi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Tiedostot\\Olio-ohjelmointi-Repository\\Olio-Ohjelmointi\\Harjoitusty\u00F6 Olio-ohjelmointi\\Harjoitusty\u00F6 Olio-ohjelmointi\\Program.cs",
+              "RelativeDocumentMoniker": "Harjoitusty\u00F6 Olio-ohjelmointi\\Program.cs",
+              "ToolTip": "C:\\Tiedostot\\Olio-ohjelmointi-Repository\\Olio-Ohjelmointi\\Harjoitusty\u00F6 Olio-ohjelmointi\\Harjoitusty\u00F6 Olio-ohjelmointi\\Program.cs",
+              "RelativeToolTip": "Harjoitusty\u00F6 Olio-ohjelmointi\\Program.cs",
+              "ViewState": "AQIAAEsBAAAAAAAAAAAowFoBAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-29T08:25:40.316Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
