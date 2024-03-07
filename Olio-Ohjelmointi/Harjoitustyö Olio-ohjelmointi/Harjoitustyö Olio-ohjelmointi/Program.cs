@@ -12,6 +12,7 @@ class Knight
     public Armor EquippedArmor { get; set; }
     public Potion EquippedPotion { get; set; }
     public int Gold { get; set; }
+    public int PotionCount;
 
     public Knight(string name, int health, int attack, int defense, int gold)
     {
@@ -20,6 +21,7 @@ class Knight
         Attack = attack;
         Defense = defense;
         Gold = gold;
+        PotionCount = PotionCount;
     }
 
     public void AttackEnemy(Enemy enemy)
@@ -28,8 +30,16 @@ class Knight
         if (damageDealt < 0)
             damageDealt = 0;
 
-        // Tarkista onko pelaajalla erityinen ase ja onko vihollinen tietty tyyppi
+        // Tarkista onko pelaajalla tietty ase ja onko vihollinen hiekkosille
         if (EquippedWeapon != null && EquippedWeapon.Name == "Bow" && enemy.Name == "Dragon")
+        {
+            damageDealt += 10; // Lisää 10 vahinkopistettä
+        }
+        if (EquippedWeapon != null && EquippedWeapon.Name == "Axe" && enemy.Name == "Orc")
+        {
+            damageDealt += 10; // Lisää 10 vahinkopistettä
+        }
+        if (EquippedWeapon != null && EquippedWeapon.Name == "Sword" && enemy.Name == "Goblin")
         {
             damageDealt += 10; // Lisää 10 vahinkopistettä
         }
@@ -131,7 +141,7 @@ class Shop
         {
             Console.WriteLine($"- {armor.Name} (Defense: {armor.Defense}, Price: {armor.Price} gold)");
         }
-        Console.WriteLine("Potions:");
+        Console.WriteLine("Potion:");
         foreach (var potion in potions)
         {
             Console.WriteLine($"- {potion.Name} (Heal Amount: {potion.HealAmount}, Price: {potion.Price} gold)");
@@ -186,11 +196,11 @@ class Shop
                 return false;
             }
         }
-        else if (itemName.ToLower() == "Leather Armor")
+        else if (itemName.ToLower() == "leather armor")
         {
-            if (player.Gold >= 30)
+            if (player.Gold >= 15)
             {
-                player.Gold -= 30;
+                player.Gold -= 15;
                 player.EquippedArmor = new Armor("Leather Armor", 5, 15);
                 Console.WriteLine("You bought the Leather Armor!");
                 return true;
@@ -201,39 +211,51 @@ class Shop
                 return false;
             }
         }
-        foreach (var armor in armors)
+        else if (itemName.ToLower() == "chainmail")
         {
-            if (armor.Name.ToLower() == itemName.ToLower())
+            if (player.Gold >= 25)
             {
-                if (player.Gold >= armor.Price)
-                {
-                    player.Gold -= armor.Price;
-                    Console.WriteLine($"You bought the {armor.Name}!");
-                    return true;
-                }
-                else
-                {
-                    Console.WriteLine("You don't have enough gold to buy this item.");
-                    return false;
-                }
+                player.Gold -= 25;
+                player.EquippedArmor = new Armor("Chainmail", 8, 25);
+                Console.WriteLine("You bought the Chainmail Armor!");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("You don't have enough gold to buy this item.");
+                return false;
+            }
+        }
+        else if (itemName.ToLower() == "plate armor")
+        {
+            if (player.Gold >= 35)
+            {
+                player.Gold -= 35;
+                player.EquippedArmor = new Armor("Plate Armor", 15, 35);
+                Console.WriteLine("You bought the Plate Armor!");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("You don't have enough gold to buy this item.");
+                return false;
             }
         }
 
-        foreach (var potion in potions)
+        else if (itemName.ToLower() == "health potion")
         {
-            if (potion.Name.ToLower() == itemName.ToLower())
+            if (player.Gold >= 10)
             {
-                if (player.Gold >= potion.Price)
-                {
-                    player.Gold -= potion.Price;
-                    Console.WriteLine($"You bought the {potion.Name}!");
-                    return true;
-                }
-                else
-                {
-                    Console.WriteLine("You don't have enough gold to buy this item.");
-                    return false;
-                }
+                player.Gold -= 10;
+                player.EquippedPotion = new Potion("Health Potion", 20, 10);
+                Console.WriteLine("You bought a Health Potion!");
+                player.PotionCount++;
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("You don't have enough gold to buy this item.");
+                return false;
             }
         }
 
@@ -260,9 +282,16 @@ class Enemy
 
     public void AttackKnight(Knight knight)
     {
-        int damageDealt = Attack - knight.Defense;
+        int damageDealt = Attack;
         if (damageDealt < 0)
             damageDealt = 0;
+
+        if (knight.EquippedArmor != null)
+        {
+            damageDealt -= knight.EquippedArmor.Defense;
+            if (damageDealt < 0)
+                damageDealt = 0;
+        }
 
         knight.Health -= damageDealt;
         Console.WriteLine($"The {Name} attacks you and deals {damageDealt} damage!");
@@ -276,15 +305,17 @@ class Program
 {
     static void Main(string[] args)
     {
-        Knight player = new Knight("Sir Knight", 100, 20, 10, 50);
+        Knight player = new Knight("Knight knightious", 100, 20, 10, 50);
         player.EquippedWeapon = new Weapon("Sword", 15, 0);
-        player.EquippedArmor = new Armor("Plate Armor", 10, 0);
+        player.EquippedArmor = new Armor("Leather Armor", 5, 0);
         player.EquippedPotion = new Potion("Health Potion", 20, 0);
+        player.Gold = 0;
+        player.PotionCount = 1;
 
         Enemy[] enemies = {
-            new Enemy("Goblin", 50, 30, 5),
-            new Enemy("Orc", 20, 15, 8),
-            new Enemy("Dragon", 20, 25, 15)
+            new Enemy("Goblin", 20, 30, 10),
+            new Enemy("Orc", 75, 15, 10),
+            //new Enemy("Dragon", 200, 25, 15)
         };
 
         Shop shop = new Shop();
@@ -301,7 +332,7 @@ class Program
             Console.WriteLine("Gold: " + player.Gold);
             Console.WriteLine("Weapon: " + player.EquippedWeapon.Name);
             Console.WriteLine("Armor: " + player.EquippedArmor.Name);
-            Console.WriteLine("Potion: " + player.EquippedPotion.Name);
+            Console.WriteLine("Health potion's: " + player.PotionCount);
             Console.WriteLine("---------------");
             Console.WriteLine("1. Fight an enemy");
             Console.WriteLine("2. Visit the shop");
@@ -312,15 +343,15 @@ class Program
             if (choice == 1)
             {
                 Enemy enemy = enemies[new Random().Next(0, enemies.Length)];
-                Console.WriteLine($"\nYou encounter a {enemy.Name}!");
+                Console.WriteLine("You encounter a " + enemy.Name + "!");
 
                 // Palauta vihollisen terveys alkuperäiseksi ennen uutta taistelua
                 int originalEnemyHealth = enemy.Health;
 
                 while (player.Health > 0 && enemy.Health > 0)
                 {
-                    Console.WriteLine($"\n{player.Name} - Health: {player.Health} | Enemy - Health: {enemy.Health}");
-                    Console.WriteLine("\n1. Attack");
+                    Console.WriteLine(player.Name + " - Health: " + player.Health + " | Enemy - Health: " + enemy.Health);
+                    Console.WriteLine("1. Attack");
                     Console.WriteLine("2. Drink Potion");
 
                     int action = Convert.ToInt32(Console.ReadLine());
@@ -331,22 +362,27 @@ class Program
                         if (enemy.Health > 0)
                             enemy.AttackKnight(player);
                     }
-                    else if (action == 2)
+                    else if (action == 2 && player.PotionCount > 0)
                     {
                         player.DrinkPotion();
+                        player.PotionCount--;
                         enemy.AttackKnight(player);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Command failed");
                     }
 
                     if (player.Health <= 0)
                     {
-                        Console.WriteLine("\nYou have been defeated! Game over.");
+                        Console.WriteLine("You have been defeated! Game over.");
                         break;
                     }
                     else if (enemy.Health <= 0)
                     {
                         int goldEarned = new Random().Next(10, 30);
                         player.Gold += goldEarned;
-                        Console.WriteLine($"\nYou have defeated the {enemy.Name} and earned {goldEarned} gold!");
+                        Console.WriteLine("You have defeated the " + enemy.Name +  " and earned " + goldEarned + " gold!");
                         break;
                     }
                 }
@@ -369,7 +405,7 @@ class Program
             }
             else if (choice == 3)
             {
-                Console.WriteLine("\nThank you for playing!");
+                Console.WriteLine("Thank you for playing!");
                 break;
             }
             else
