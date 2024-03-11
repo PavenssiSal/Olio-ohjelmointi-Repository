@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Pls let me go home
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Diagnostics.CodeAnalysis;
@@ -34,8 +35,7 @@ class Knight
         while (true)
         {
             bool IsHit = true;
-
-        int damageDealt = Attack - enemy.Defense;
+        int damageDealt = Attack + EquippedWeapon.Damage - enemy.Defense;
         if (damageDealt < 0)
             damageDealt = 0;
         //Juttu joka tekee sen että lohikäärmeeseen osumiseen mahdollisuudet on 50/50 jos ei käytä Bowia
@@ -187,6 +187,7 @@ class Shop
     {
         Console.WriteLine("Welcome to the shop! What would you like to buy?");
         Console.WriteLine("Weapons:");
+        //ChatGPT teki nää foreach jutut. Pienintäkää ideaa enää miten tää toimi mut it works
         foreach (var weapon in weapons)
         {
             Console.WriteLine($"- {weapon.Name} (Damage: {weapon.Damage}, Price: {weapon.Price} gold)");
@@ -201,7 +202,7 @@ class Shop
         {
             Console.WriteLine($"- {potion.Name} (Heal Amount: {potion.HealAmount}, Price: {potion.Price} gold)");
         }
-        Console.WriteLine("Enter 'exit' to leave the shop.");
+        Console.WriteLine("'Enter' to leave the shop.");
     }
 
     public bool BuyItem(Knight player, string itemName)
@@ -314,7 +315,7 @@ class Shop
             }
         }
 
-        Console.WriteLine("That item is not available in the shop.");
+        Console.WriteLine("That item is not available in the shop. We recommend you go to a different store.......If those exist");
         return false;
     }
 }
@@ -368,9 +369,9 @@ class Program
         player.PotionCount = 1;
 
         Enemy[] enemies = {
-            new Enemy("Goblin", 20, 30, 10),
-            new Enemy("Orc", 75, 15, 10),
-            new Enemy("Dragon", 100, 25, 15)
+            new Enemy("Goblin", 30, 15, 10),
+            new Enemy("Orc", 80, 20, 15),
+            new Enemy("Dragon", 200, 25, 20)
         };
 
         Shop shop = new Shop();
@@ -394,7 +395,7 @@ class Program
             Console.WriteLine("3. Quit");
 
 
-
+            //Please dont f**k up the game and just do as told
             int choice = Convert.ToInt32(Console.ReadLine());
 
             if (choice == 1)
@@ -415,7 +416,7 @@ class Program
                         Console.WriteLine("2. Drink Potion");
                         Console.WriteLine("---------------");
 
-                        //Please dont f**k up the game and just do as told
+                        //Still please dont f**k up the game and just do as told
                         int action = Convert.ToInt32(Console.ReadLine());
 
                         if (action == 1)
@@ -436,6 +437,12 @@ class Program
                             enemy.AttackKnight(player);
                             Console.WriteLine("---------------");
                         }
+                        else if (action == 2 && player.PotionCount == 0)
+                        {
+                            Console.WriteLine("Out of potions");
+                            enemy.AttackKnight(player);
+                            Console.WriteLine("---------------");
+                        }
                         else
                         {
                             Console.WriteLine("Command failed");
@@ -451,6 +458,7 @@ class Program
                             int goldEarned = new Random().Next(10, 30);
                             player.Gold += goldEarned;
                             Console.WriteLine("You have defeated the " + enemy.Name + " and earned " + goldEarned + " gold!");
+                            player.CanFight = true;
                             break;
                         }
                     }
@@ -481,7 +489,6 @@ class Program
             }
             else if (choice == 3)
             {
-                Console.WriteLine("Thank you for playing!");
                 break;
             }
             else
