@@ -1,4 +1,5 @@
 ﻿//Pls let me go home
+using Harjoitustyö_Olio_ohjelmointi;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
@@ -369,7 +370,6 @@ class Program
         player.PotionCount = 1;
 
         Enemy[] enemies = {
-            new Enemy("Goblin", 30, 15, 10),
             new Enemy("Orc", 80, 20, 15),
             new Enemy("Dragon", 200, 25, 20)
         };
@@ -394,10 +394,9 @@ class Program
             Console.WriteLine("2. Visit the shop");
             Console.WriteLine("3. Quit");
 
-
             //Please dont f**k up the game and just do as told
             int choice = Convert.ToInt32(Console.ReadLine());
-
+ 
             if (choice == 1)
             {
                 Console.WriteLine("---------------");
@@ -490,6 +489,10 @@ class Program
             else if (choice == 3)
             {
                 break;
+            }
+            else if (choice == 0)
+            {
+                IEnemy enemy;
             }
             else
             {

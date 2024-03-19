@@ -5,6 +5,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{36FF1181-0DD9-4DAF-86AF-815478C349BD}|Harjoitusty\u00F6 Olio-ohjelmointi\\Harjoitusty\u00F6 Olio-ohjelmointi.csproj|c:\\tiedostot\\olio-ohjelmointi-repository\\olio-ohjelmointi\\harjoitusty\u00F6 olio-ohjelmointi\\harjoitusty\u00F6 olio-ohjelmointi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{36FF1181-0DD9-4DAF-86AF-815478C349BD}|Harjoitusty\u00F6 Olio-ohjelmointi\\Harjoitusty\u00F6 Olio-ohjelmointi.csproj|solutionrelative:harjoitusty\u00F6 olio-ohjelmointi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36FF1181-0DD9-4DAF-86AF-815478C349BD}|Harjoitusty\u00F6 Olio-ohjelmointi\\Harjoitusty\u00F6 Olio-ohjelmointi.csproj|c:\\tiedostot\\olio-ohjelmointi-repository\\olio-ohjelmointi\\harjoitusty\u00F6 olio-ohjelmointi\\harjoitusty\u00F6 olio-ohjelmointi\\goblin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36FF1181-0DD9-4DAF-86AF-815478C349BD}|Harjoitusty\u00F6 Olio-ohjelmointi\\Harjoitusty\u00F6 Olio-ohjelmointi.csproj|solutionrelative:harjoitusty\u00F6 olio-ohjelmointi\\goblin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36FF1181-0DD9-4DAF-86AF-815478C349BD}|Harjoitusty\u00F6 Olio-ohjelmointi\\Harjoitusty\u00F6 Olio-ohjelmointi.csproj|c:\\tiedostot\\olio-ohjelmointi-repository\\olio-ohjelmointi\\harjoitusty\u00F6 olio-ohjelmointi\\harjoitusty\u00F6 olio-ohjelmointi\\ienemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36FF1181-0DD9-4DAF-86AF-815478C349BD}|Harjoitusty\u00F6 Olio-ohjelmointi\\Harjoitusty\u00F6 Olio-ohjelmointi.csproj|solutionrelative:harjoitusty\u00F6 olio-ohjelmointi\\ienemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,9 +32,35 @@
               "RelativeDocumentMoniker": "Harjoitusty\u00F6 Olio-ohjelmointi\\Program.cs",
               "ToolTip": "C:\\Tiedostot\\Olio-ohjelmointi-Repository\\Olio-Ohjelmointi\\Harjoitusty\u00F6 Olio-ohjelmointi\\Harjoitusty\u00F6 Olio-ohjelmointi\\Program.cs",
               "RelativeToolTip": "Harjoitusty\u00F6 Olio-ohjelmointi\\Program.cs",
-              "ViewState": "AQIAAHkBAAAAAAAAAAAAAHUBAAArAAAA",
+              "ViewState": "AQIAAM4BAAAAAAAAAAAAAO4BAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-29T08:25:40.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Goblin.cs",
+              "DocumentMoniker": "C:\\Tiedostot\\Olio-ohjelmointi-Repository\\Olio-Ohjelmointi\\Harjoitusty\u00F6 Olio-ohjelmointi\\Harjoitusty\u00F6 Olio-ohjelmointi\\Goblin.cs",
+              "RelativeDocumentMoniker": "Harjoitusty\u00F6 Olio-ohjelmointi\\Goblin.cs",
+              "ToolTip": "C:\\Tiedostot\\Olio-ohjelmointi-Repository\\Olio-Ohjelmointi\\Harjoitusty\u00F6 Olio-ohjelmointi\\Harjoitusty\u00F6 Olio-ohjelmointi\\Goblin.cs",
+              "RelativeToolTip": "Harjoitusty\u00F6 Olio-ohjelmointi\\Goblin.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T11:39:17.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IEnemy.cs",
+              "DocumentMoniker": "C:\\Tiedostot\\Olio-ohjelmointi-Repository\\Olio-Ohjelmointi\\Harjoitusty\u00F6 Olio-ohjelmointi\\Harjoitusty\u00F6 Olio-ohjelmointi\\IEnemy.cs",
+              "RelativeDocumentMoniker": "Harjoitusty\u00F6 Olio-ohjelmointi\\IEnemy.cs",
+              "ToolTip": "C:\\Tiedostot\\Olio-ohjelmointi-Repository\\Olio-Ohjelmointi\\Harjoitusty\u00F6 Olio-ohjelmointi\\Harjoitusty\u00F6 Olio-ohjelmointi\\IEnemy.cs",
+              "RelativeToolTip": "Harjoitusty\u00F6 Olio-ohjelmointi\\IEnemy.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T11:38:40.019Z",
               "EditorCaption": ""
             }
           ]
