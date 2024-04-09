@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Harjoitustyö Olio-ohjelmointi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b4a8fb408e21ad0efd547efb5c423adb239a6f8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a107e3cf76398097b7489b5ee37acbeda9e62d5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Harjoitustyö Olio-ohjelmointi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Harjoitustyö Olio-ohjelmointi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
